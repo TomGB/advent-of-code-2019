@@ -78,7 +78,6 @@ const machine = (inputData, input, pointer = 0) => {
             }
 
             pointer = outcome
-
         } while (pointer < instructions.length)
     }
 
