@@ -15,5 +15,8 @@ const pixels = Array.from({ length: width * height }, (_, positionIndex) =>
   ]
 )
 
-const print = pixels.map((pixel, index) => (!(index % width) ? '\n' : '') + pixel).join('')
+// const print = pixels.map((pixel, index) => (!(index % width) ? '\n' : '') + pixel).join('')
+const splitLines = new RegExp(`.{${width}}`, 'g')
+const print = pixels.join('').match(splitLines).join('\n')
 console.log(print)
+// str.match(/.{150}/g)
